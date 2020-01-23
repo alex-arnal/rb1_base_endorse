@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="id_robot" default="$(optenv ROBOT_ID rb1_base)"/>
+  <arg name="prefix" default="$(arg id_robot)_"/>
+
+  <group ns="$(arg id_robot)">
+
+    <include file="$(find rb1_base_endorse_bringup)/launch/navigation/move.launch"/>
+
+    <include file="$(find rb1_base_endorse_bringup)/launch/navigation/docker.launch"/>
+  
+  </group>
+
+</launch>

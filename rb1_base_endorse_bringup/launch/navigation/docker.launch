@@ -1,0 +1,42 @@
+<launch>
+    <arg name="robot_base_frame" default="rb1_base_footprint" />
+    <arg name="fixed_frame" default="rb1_base_odom" />
+    <arg name="cmd_vel" default="cmd_vel" />
+
+    <node name="pp_docker" pkg="robotnik_docker" type="purepursuit_docker_node" respawn="false" output="screen">
+        <param name="robot_base_frame" type="string" value="$(arg robot_base_frame)" />
+        <param name="fixed_frame" type="string" value="$(arg fixed_frame)" />
+
+        <param name="gain_linear_velocity_x" value="0.5" />
+        <param name="gain_angular_velocity_z" value="2.0" />
+
+        <param name="maximum_linear_velocity_x" value="0.4" />
+        <param name="maximum_angular_velocity_z" value="0.7" />
+
+        <param name="minimum_relative_linear_velocity_between_robot_and_goal" value="0.01" />
+        <param name="minimum_relative_angular_velocity_between_robot_and_goal" value="0.02" />
+
+        <param name="check_robot_is_moving_to_goal" value="true" />
+        <param name="robot_moving_to_goal_delay" value="30.0" />
+
+        <param name="free_goal_velocity" value="true" />
+
+        <param name="goal_threshold_x" value="0.01" />
+        <param name="goal_threshold_y" value="0.01" />
+
+        <param name="threshold_linear_velocity_x" value="0.01" />
+        <param name="threshold_linear_velocity_y" value="0.01" />
+        <param name="threshold_angular_velocity_z" value="0.01" />
+
+        <param name="check_initial_limits" value="false" />
+
+        <!-- custom params -->
+        <param name="kr" value="0.2"/>
+        <param name="look_ahead" value="0.3"/>
+        <param name="pre_dock_point_distance" value="-1.0"/>
+        <remap from="cmd_vel" to="$(arg cmd_vel)"/>
+        <param name="free_flight_mode" value="true" />
+
+    </node>
+
+</launch>

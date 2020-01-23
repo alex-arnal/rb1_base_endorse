@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="move_base_robot_a" default="true"/>
+	<arg name="amcl_and_mapserver_a" default="true"/>
+	
+    <include file="$(find rb1_base_sim_bringup)/launch/rb1_base_complete.launch">
+        <arg name="move_base_robot_a" default="$(arg move_base_robot_a)"/>
+        <arg name="amcl_and_mapserver_a" default="$(arg amcl_and_mapserver_a)"/>	
+    </include>
+
+    <include file="$(find rb1_base_endorse_bringup)/launch/navigation/navigation_complete.launch"/>
+
+    <include file="$(find rb1_base_endorse_bringup)/launch/control/robot_local_control.launch"/>
+    
+</launch>

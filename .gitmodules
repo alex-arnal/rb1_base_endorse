@@ -1,0 +1,48 @@
+[submodule "hector_gazebo"]
+	path = hector_gazebo
+	url = https://github.com/tu-darmstadt-ros-pkg/hector_gazebo
+[submodule "robot_localization_utils"]
+	path = robot_localization_utils
+	url = https://github.com/RobotnikAutomation/robot_localization_utils
+[submodule "rostful"]
+	path = rostful
+	url = https://github.com/RobotnikAutomation/rostful
+[submodule "rb1_base_sim"]
+	path = rb1_base_sim
+	url = https://github.com/RobotnikAutomation/rb1_base_sim
+[submodule "robotnik_base_hw_sim"]
+	path = robotnik_base_hw_sim
+	url = https://github.com/RobotnikAutomation/robotnik_base_hw_sim
+[submodule "procedures_msgs"]
+	path = procedures_msgs
+	url = https://github.com/RobotnikAutomation/procedures_msgs
+[submodule "rcomponent"]
+	path = rcomponent
+	url = https://github.com/RobotnikAutomation/rcomponent
+[submodule "robotnik_msgs"]
+	path = robotnik_msgs
+	url = https://github.com/RobotnikAutomation/robotnik_msgs
+[submodule "rb1_base_common"]
+	path = rb1_base_common
+	url = https://github.com/RobotnikAutomation/rb1_base_common
+[submodule "robot_local_control_msgs"]
+	path = robot_local_control_msgs
+	url = https://github.com/RobotnikAutomation/robot_local_control_msgs
+[submodule "robotnik_sensors"]
+	path = robotnik_sensors
+	url = https://github.com/RobotnikAutomation/robotnik_sensors
+[submodule "marker_mapping"]
+	path = marker_mapping
+	url = https://github.com/RobotnikAutomation/marker_mapping
+[submodule "robot_local_control"]
+	path = robot_local_control
+	url = https://github.com/RobotnikAutomation/robot_local_control
+[submodule "robotnik_navigation"]
+	path = robotnik_navigation
+	url = https://github.com/RobotnikAutomation/robotnik_navigation
+[submodule "robot_simple_command_manager"]
+	path = robot_simple_command_manager
+	url = https://github.com/RobotnikAutomation/robot_simple_command_manager
+[submodule "robot_simple_command_manager_msgs"]
+	path = robot_simple_command_manager_msgs
+	url = https://github.com/RobotnikAutomation/robot_simple_command_manager_msgs
