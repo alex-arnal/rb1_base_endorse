@@ -46,3 +46,6 @@
 [submodule "robot_simple_command_manager_msgs"]
 	path = robot_simple_command_manager_msgs
 	url = https://github.com/RobotnikAutomation/robot_simple_command_manager_msgs
+[submodule "mqtt_bridge"]
+	path = mqtt_bridge
+	url = https://github.com/groove-x/mqtt_bridge

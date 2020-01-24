@@ -9,7 +9,5 @@
     </include>
 
     <include file="$(find rb1_base_endorse_bringup)/launch/navigation/navigation_complete.launch"/>
-
-    <include file="$(find rb1_base_endorse_bringup)/launch/control/robot_local_control.launch"/>
     
 </launch>

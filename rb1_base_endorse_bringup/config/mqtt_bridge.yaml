@@ -1,0 +1,13 @@
+mqtt:
+  client:
+    protocol: 4      # MQTTv311
+  connection:
+    host: localhost
+    port: 1883
+    keepalive: 60
+bridge:
+  # ping pong
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: robot_simple_command_manager_msgs.msg:CommandString
+    topic_from: endorse/robot_1/commands
+    topic_to: command_manager/command
