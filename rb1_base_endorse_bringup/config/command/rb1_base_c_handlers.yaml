@@ -1,0 +1,13 @@
+command_handlers:
+  - GOTO
+  - ELEVATOR  
+
+GOTO:
+  type: move_base_action_interface/MoveBaseActionInterface
+  namespace: move_base
+  frame_id: rb1_base_c_map
+
+ELEVATOR:
+  type: elevator_service_interface/ElevatorServiceInterface
+  namespace: robotnik_base_control/set_elevator
+ 

@@ -6,8 +6,48 @@ mqtt:
     port: 1883
     keepalive: 60
 bridge:
-  # ping pong
+  # Robot A bridges
   - factory: mqtt_bridge.bridge:MqttToRosBridge
     msg_type: robot_simple_command_manager_msgs.msg:CommandString
     topic_from: endorse/robot_1/commands
-    topic_to: command_manager/command
+    topic_to: /rb1_base_a/command_manager/command
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: std_msgs.msg:Empty
+    topic_from: endorse/robot_1/cancel
+    topic_to: /rb1_base_a/command_manager/cancel
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: robot_simple_command_manager_msgs.msg:CommandString
+    topic_from: endorse/robot_1/commands
+    topic_to: /rb1_base_a/command_manager/command
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: robot_simple_command_manager_msgs.msg:CommandStringFeedback
+    topic_from: /rb1_base_a/command_manager/feedback
+    topic_to: endorse/robot_1/feedback
+
+  # Robot B bridges
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: robot_simple_command_manager_msgs.msg:CommandString
+    topic_from: endorse/robot_2/commands
+    topic_to: /rb1_base_b/command_manager/command
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: std_msgs.msg:Empty
+    topic_from: endorse/robot_2/cancel
+    topic_to: /rb1_base_b/command_manager/cancel
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: robot_simple_command_manager_msgs.msg:CommandStringFeedback
+    topic_from: /rb1_base_b/command_manager/feedback
+    topic_to: endorse/robot_2/feedback
+  
+  # Robot C bridges
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: robot_simple_command_manager_msgs.msg:CommandString
+    topic_from: endorse/robot_3/commands
+    topic_to: /rb1_base_c/command_manager/command
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: std_msgs.msg:Empty
+    topic_from: endorse/robot_3/cancel
+    topic_to: /rb1_base_c/command_manager/cancel
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: robot_simple_command_manager_msgs.msg:CommandStringFeedback
+    topic_from: /rb1_base_c/command_manager/feedback
+    topic_to: endorse/robot_3/feedback
