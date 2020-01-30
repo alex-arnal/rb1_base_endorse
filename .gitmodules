@@ -31,9 +31,6 @@
 [submodule "robotnik_sensors"]
 	path = robotnik_sensors
 	url = https://github.com/RobotnikAutomation/robotnik_sensors
-[submodule "marker_mapping"]
-	path = marker_mapping
-	url = https://github.com/RobotnikAutomation/marker_mapping
 [submodule "robot_local_control"]
 	path = robot_local_control
 	url = https://github.com/RobotnikAutomation/robot_local_control
