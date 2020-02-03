@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <arg name="command_input_name" default="command"/>
+  <arg name="id_robot_a" default="rb1_base_a"/>
+  <arg name="launch_robot_a" default="true"/>
+  <arg name="id_robot_b" default="rb1_base_b"/>
+  <arg name="launch_robot_b" default="true"/>
+  <arg name="id_robot_c" default="rb1_base_c"/>
+  <arg name="launch_robot_c" default="true"/>
+  
+  <include file="$(find command_interface)/launch/command_manager.launch">
+    <arg name="command_input_name" value="$(arg command_input_name)"/>
+    <arg name="id_robot_a" value="$(arg id_robot_a)"/>
+    <arg name="launch_robot_a" value="$(arg launch_robot_a)"/>
+    <arg name="id_robot_b" value="$(arg id_robot_b)"/>
+    <arg name="launch_robot_b" value="$(arg launch_robot_b)"/>
+    <arg name="id_robot_c" value="$(arg id_robot_c)"/>
+    <arg name="launch_robot_c" value="$(arg launch_robot_c)"/>
+  </include>
+
+  <include file="$(find command_interface)/launch/mqtt_bridge.launch" />
+
+</launch>
